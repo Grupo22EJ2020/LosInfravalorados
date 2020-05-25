@@ -9,9 +9,7 @@ class Empleado() :
          archivo = open("./archivos/Empleado.txt",'a')
          numeroInt= str (self.idEmpleado)
          archivo.write (numeroInt)
-         archivo = open("./archivos/Empleado.txt",'a')
          archivo.write (self.nombre)
-         archivo = open("./archivos/Empleado.txt",'a')
          archivo.write (self.direccion)
          archivo.close()
     
