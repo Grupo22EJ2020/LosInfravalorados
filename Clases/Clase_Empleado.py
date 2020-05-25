@@ -5,21 +5,28 @@ class Empleado() :
          self.direccion = direccion
 
 
-    def agregarEmpleado (self, idEmpleado, nombre, direccion):
-         print (30 * "*")
+     def AgregarEmpleado (self,idEmpleado,nombre,direccion): 
          archivo = open("./archivos/Empleado.txt",'a')
-         archivo.write (idEmpleado)
+         numeroInt= str (self.idEmpleado)
+         archivo.write (numeroInt)
          archivo = open("./archivos/Empleado.txt",'a')
-         archivo.write (nombre)
+         archivo.write (self.nombre)
          archivo = open("./archivos/Empleado.txt",'a')
-         archivo.write (direccion)
+         archivo.write (self.direccion)
          archivo.close()
     
-    def consultaCompleta (self): 
-        archivo = open ("./archivos/Empleado.txt",'r')
-        for renglon in archivo: 
-            datosEmpleados = renglon.split('|')
-            print (f'Id: {datosEmpleados[0]} Nombre: {datosEmpleados[1]} Direccion: {datosEmpleados[2]}')
-        archivo.close() 
+     def consultaCompleta (self): 
+         archivo = open ("./archivos/Empleado.txt",'r')
+         for renglon in archivo: 
+             datosEmpleados = renglon.split('|')
+             print (f'Id: {datosEmpleados[0]} Nombre: {datosEmpleados[1]} Direccion: {datosEmpleados[2]}')
+         archivo.close() 
+
+     def consultaEspecifica (self, idEmpleado): 
+         archivo = open('./archivos/Empleado.txt',"r",encoding='utf8')
+         for renglon in archivo:
+             print(f"No. Caracteres: {len(renglon)}: Renglon: {renglon}")
+         archivo.close()
     
+
 
