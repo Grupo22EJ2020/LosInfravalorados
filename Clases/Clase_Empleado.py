@@ -13,6 +13,13 @@ class Empleado() :
          archivo.write (nombre)
          archivo = open("./archivos/Empleado.txt",'a')
          archivo.write (direccion)
-         archvios.close()
-        
+         archivo.close()
+    
+    def consultaCompleta (self): 
+        archivo = open ("./archivos/Empleado.txt",'r')
+        for renglon in archivo: 
+            datosEmpleados = renglon.split('|')
+            print (f'Id: {datosEmpleados[0]} Nombre: {datosEmpleados[1]} Direccion: {datosEmpleados[2]}')
+        archivo.close() 
+    
 
