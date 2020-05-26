@@ -1,6 +1,6 @@
 from Clase_Empleado import Empleado
 
-def eliminarEmpleado(self, idEmpleado): 
+def eliminarEmpleado(idEmpleado): 
     with open('./archivos/Empleado.txt',"r+") as archivo: 
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
