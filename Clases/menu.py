@@ -26,5 +26,12 @@ if opcionInicial == 1:
             print(archivo.read())
             archivo.close()
             print ("se te mostro la informacion requerida")
-            print ("te mostrare el menu inicial. \nElige una opcion" )
-            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
+            print ("*" * 30 )
+            final = int (input("te gustaria continuar? 1. SI \n2. NO : "))
+            if final == 1: 
+                print ("te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
+            elif final ==2: 
+                print ("*" * 30 )
+                print ("PROGRAMA TERMINADO")
+                print ("*" * 30 )
