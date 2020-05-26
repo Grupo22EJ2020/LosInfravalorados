@@ -8,7 +8,8 @@ class Empleado() :
      def AgregarEmpleado (self,idEmpleado,nombre,direccion): 
          archivo = open("./archivos/Empleado.txt",'a')
          numeroInt= str (idEmpleado)
-         archivo.write (numeroInt + "|" + nombre + "|" + direccion)
+         archivo.write (numeroInt + "|" + nombre + "|" + direccion )
+
          archivo.close()
 
 

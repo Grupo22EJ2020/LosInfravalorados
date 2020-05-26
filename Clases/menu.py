@@ -42,7 +42,7 @@ if opcionInicial == 1:
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
 
         elif segundaOpcion == 2: 
-            idABorrar = ("dime el id del empleado que deseas eliminar")
+            idABorrar = input("dime el id del empleado que deseas eliminar")
             eliminarEmpleado(idABorrar)
             print ("tu empleado a sido borrado")
             print ("*" * 30 )
