@@ -79,10 +79,34 @@ if opcionInicial == 1:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
+
+
+
 if opcionInicial == 3:
     while opcionInicial == 3:
         print ("Elegiste Tema")
         print ("Este es el menu disponible: ")
         segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Empleado Especifico \n:"))
+        if segundaOpcion == 1:
+            print ("A continuacion te pedire algunos datos necesarios para agregar el tema: ")
+            idTema = int(input("Dame el id del tema \n: "))
+            nombre = input ("dame el nombre del tema \n: ")
+            nuevoTema = Tema(idTema, nombre)
+            nuevoTema.AgregarTema(idTema, nombre)
+            print ("Tu tema se agrego")
+            print ("*" * 30 )
+            print ("te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
+        elif segundaOpcion == 2:
+            idAborrar = ("Dime el id del tema que deseas borrar")
+            eliminarTema(idAborrar)
+            print ("Tu tema se borro")
+            print ("*" * 30 )
+            print ("te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+        elif segundaOpcion == 4:
+            print ("Se te mostrara toda la informacion en la base de datos ")
+
         
 
