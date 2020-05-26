@@ -8,10 +8,9 @@ class Empleado() :
      def AgregarEmpleado (self,idEmpleado,nombre,direccion): 
          archivo = open("./archivos/Empleado.txt",'a')
          numeroInt= str (self.idEmpleado)
-         archivo.write (numeroInt)
-         archivo.write (self.nombre)
-         archivo.write (self.direccion)
+         archivo.write (numeroInt + "|" + nombre + "|" + direccion)
          archivo.close()
+
     
      def consultaCompleta (self): 
          archivo = open ("./archivos/Empleado.txt",'r')
