@@ -7,17 +7,10 @@ class Empleado() :
 
      def AgregarEmpleado (self,idEmpleado,nombre,direccion): 
          archivo = open("./archivos/Empleado.txt",'a')
-         numeroInt= str (self.idEmpleado)
+         numeroInt= str (idEmpleado)
          archivo.write (numeroInt + "|" + nombre + "|" + direccion)
          archivo.close()
 
-    
-     def consultaCompleta (self): 
-         archivo = open ("./archivos/Empleado.txt",'r')
-         for renglon in archivo: 
-             datosEmpleados = renglon.split('|')
-             print (f'Id: {datosEmpleados[0]} Nombre: {datosEmpleados[1]} Direccion: {datosEmpleados[2]}')
-         archivo.close() 
 
      def consultaEspecifica (self, idEmpleado): 
          archivo = open('./archivos/Empleado.txt',"r",encoding='utf8')
