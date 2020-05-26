@@ -79,5 +79,10 @@ if opcionInicial == 1:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
-
+if opcionInicial == 3:
+    while opcionInicial == 3:
+        print ("Elegiste Tema")
+        print ("Este es el menu disponible: ")
+        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Empleado Especifico \n:"))
+        
 
