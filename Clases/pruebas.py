@@ -1,10 +1,7 @@
 from Clase_Empleado import Empleado 
 
-
-direccion = (" monte apennios")
-nombre = (" carlos ")
-idEmpleado = (22 ) 
- 
-mostrar = Empleado(idEmpleado, nombre, direccion)
-mostrar.AgregarEmpleado(idEmpleado, nombre, direccion)
+nombre = "carlos"
+direccion = "everest"
+borrar = Empleado(45, nombre, direccion) 
+borrar.borrarEmpleado(45)
 

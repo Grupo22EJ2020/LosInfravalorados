@@ -46,9 +46,9 @@ if opcionInicial == 1:
             if final == 1: 
                 print ("te mostrare el menu inicial. \nElige una opcion" )
                 opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
-                elif final ==2: 
-                    print ("*" * 30 )
-                    print ("PROGRAMA TERMINADO")
-                    print ("*" * 30 )
+            elif final ==2: 
+                print ("*" * 30 )
+                print ("PROGRAMA TERMINADO")
+                print ("*" * 30 )
 
 
