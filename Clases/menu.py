@@ -10,6 +10,14 @@ def eliminarEmpleado(self, idEmpleado):
                 archivo.write(renglon)
         archivo.truncate()
 
+def eliminarTema(self, idTema):
+    with open('./archivos/Tema.txt',"r+") as archivo:
+        nuevoArchivo= archivo.readlines()
+        archivo.seek(0)
+        for renglon in nuevoArchivo:
+            if idTema not in renglon:
+                archivo.write(renglon)
+        archivo.truncate()
 
 print ("*"* 30)
 print ("Te mostrare el menu inicial")
