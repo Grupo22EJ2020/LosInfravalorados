@@ -1,4 +1,5 @@
 from Clase_Empleado import Empleado
+from Clase_Tema import Tema
 
 def eliminarEmpleado(self, idEmpleado): 
     with open('./archivos/Empleado.txt',"r+") as archivo: 
