@@ -1,5 +1,15 @@
 from Clase_Empleado import Empleado
 
+def eliminarEmpleado(self, idEmpleado): 
+    with open('./archivos/Empleado.txt',"r+") as archivo: 
+        nuevoArchivo= archivo.readlines()
+        archivo.seek(0)
+        for renglon in nuevoArchivo:
+            if idEmpleado not in renglon: 
+                archivo.write(renglon)
+        archivo.truncate()
+
+
 print ("*"* 30)
 print ("Te mostrare el menu inicial")
 print ("Teclea el numero de la opcion donde deseas realizar un cambio")
@@ -21,6 +31,15 @@ if opcionInicial == 1:
             print ("*" * 30 )
             print ("te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
+        elif segundaOpcion == 2: 
+            idABorrar = ("dime el id del empleado que deseas eliminar")
+            eliminarEmpleado(idABorrar)
+            print ("tu empleado a sido borrado")
+            print ("*" * 30 )
+            print ("te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
         elif segundaOpcion == 4: 
             print ("Se te mostrara toda la informacion en la base de datos ")
             archivo = open("./archivos/Empleado.txt",'r')
@@ -36,6 +55,7 @@ if opcionInicial == 1:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
+
         elif segundaOpcion == 5: 
             idRequerida = int(input("dime la id requerida del empleado que quieres ver"))
             mostrarEmpleadoEspecifico = Empleado(idRequerida)

@@ -18,7 +18,6 @@ class Empleado() :
              print(f"No. Caracteres: {len(renglon)}: Renglon: {renglon}")
          archivo.close()
 
-     
          
      
         
