@@ -198,5 +198,23 @@ if opcionInicial == 2:
             cursoModificado = Curso(idCurso, descripcion, idEmpleado)
             cursoModificado.AgregarCurso(idCurso, descripcion, idEmpleado)
 
+
+        elif segundaOpcion == 4: 
+            print ("Se te mostrara toda la informacion en la base de datos ")
+            archivo = open("./archivos/Cursos.txt",'r')
+            print(archivo.read())
+            archivo.close()
+            print ("SE TE MOSTRO LA INFORMACION REQUERIDA")
+            print ("*" * 30 )
+            final = int (input("Te gustaria continuar? 1. SI \n2. NO : "))
+            if final == 1: 
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
+            elif final ==2: 
+                print ("*" * 30 )
+                print ("PROGRAMA TERMINADO")
+                print ("*" * 30 )
+                
+
         
 
