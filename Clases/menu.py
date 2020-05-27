@@ -1,5 +1,6 @@
 from Clase_Empleado import Empleado
 from Clase_Tema import Tema
+from Clase_Curso import Curso
 
 def eliminarEmpleado(idEmpleado): 
     with open('./archivos/Empleado.txt',"r+") as archivo: 
@@ -26,6 +27,14 @@ def eliminarTema(self, idTema):
                 archivo.write(renglon)
         archivo.truncate()
 
+def eliminarCurso(self,idCurso):
+    with open('./archivos/Cursos.txt',"r+") as archivo:
+        nuevoArchivo= archivo.readlines()
+        archivo.seek(0)
+        for renglon in nuevoArchivo:
+            if idCurso not in renglon:
+                archivo.write(renglon)
+        archivo.truncate()
 
 print ("*"* 30)
 print ("Te mostrare el menu inicial")
