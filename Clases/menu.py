@@ -188,5 +188,15 @@ if opcionInicial == 2:
             print ("Te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
 
+
+        elif segundaOpcion == 3: 
+            idAModificar = input ("Dime el id del curso que quieres modificar \n:")
+            eliminarCurso(idAModificar)
+            idCurso = int (input ("Dame el id del curso \n: "))
+            descripcion = input ("Dame la descripcion del curso\n:")
+            idEmpleado = input ("Dame la id del empleado \n:")
+            cursoModificado = Curso(idCurso, descripcion, idEmpleado)
+            cursoModificado.AgregarCurso(idCurso, descripcion, idEmpleado)
+
         
 
