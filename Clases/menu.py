@@ -29,7 +29,7 @@ def eliminarTema(self, idTema):
                 archivo.write(renglon)
         archivo.truncate()
 
-def eliminarCurso(self,idCurso):
+def eliminarCurso(idCurso):
     with open('./archivos/Curso.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
@@ -39,7 +39,7 @@ def eliminarCurso(self,idCurso):
         archivo.truncate()
 
 
-def eliminarCurso_Tema(self,idCurso_Tema):
+def eliminarCurso_Tema(idCurso_Tema):
     with open('./archivos/Curso_tema.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
@@ -55,7 +55,7 @@ def Curso_Tema_Especifico(idCurso_Tema):
             print (linea) 
 
 
-def eliminarCurso_Tema_Video(self,idCurso_Tema_Video):
+def eliminarCurso_Tema_Video(idCurso_Tema_Video):
     with open('./archivos/Curso_Tema_Video.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
