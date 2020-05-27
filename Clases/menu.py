@@ -29,6 +29,13 @@ def eliminarTema(idTema):
                 archivo.write(renglon)
         archivo.truncate()
 
+def consultaEspTema (self,idTema):
+    archivo = open ("./archivos/Tema.txt",'r',encoding='utf8')
+    for renglon in archivo:
+        print(f"No. Caracteres:{len(renglon)}: Renglon: {renglon} ")
+        archivo.close()
+
+
 def eliminarCurso(self,idCurso):
     with open('./archivos/Curso.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
