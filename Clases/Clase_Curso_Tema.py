@@ -5,7 +5,7 @@ class Curso_Tema():
         self.idTema = idTema 
 
      def AgregarVinculo (self,idCursoTema, idCurso, idTema): 
-         archivo = open("./archivos/Empleado.txt",'a')
+         archivo = open("./archivos/Curso_tema.txt",'a')
          numeroInt= str (idCursoTema)
          archivo.write (numeroInt + "|" + idCurso + "|" + idTema + "|" + '\n')
          archivo.close()

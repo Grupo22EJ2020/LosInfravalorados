@@ -30,7 +30,7 @@ def eliminarTema(self, idTema):
         archivo.truncate()
 
 def eliminarCurso(self,idCurso):
-    with open('./archivos/Cursos.txt',"r+") as archivo:
+    with open('./archivos/Curso.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
         for renglon in nuevoArchivo:
