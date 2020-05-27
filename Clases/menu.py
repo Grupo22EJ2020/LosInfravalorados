@@ -125,9 +125,7 @@ if opcionInicial == 1:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
-
-
-if opcionInicial == 3:
+elif opcionInicial == 3:
     while opcionInicial == 3:
         print ("Elegiste Tema")
         print ("Este es el menu disponible: ")
@@ -182,13 +180,12 @@ if opcionInicial == 3:
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
 
-
-if opcionInicial == 2: 
+elif opcionInicial == 2: 
     while opcionInicial == 2:
         print ("Elegiste CURSOS") 
         print ("Este es el menu disponible: ")
-        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n:"))
-        if segundaOpcion == 1: 
+        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n6. Ver Union Curso-Tema \n7. Ver union Curso-Video")
+        if segundaOpcion == 1:    
             print ("A continuacion de pedire algunos datos requeridos para agregar Cursos:")
             idCurso = int (input ("Dame el id del curso \n: "))
             descripcion = input ("Dame la descripcion del curso \n:")
@@ -199,8 +196,6 @@ if opcionInicial == 2:
             print ("*" * 30 )
             print ("Te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
-
-
         elif segundaOpcion == 2: 
             idABorrar = input("Dime el id del curso que deseas eliminar")
             eliminarCurso(idABorrar)
@@ -208,8 +203,6 @@ if opcionInicial == 2:
             print ("*" * 30 )
             print ("Te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
-
-
         elif segundaOpcion == 3: 
             idAModificar = input ("Dime el id del curso que quieres modificar \n:")
             eliminarCurso(idAModificar)
@@ -218,8 +211,6 @@ if opcionInicial == 2:
             idEmpleado = input ("Dame la id del empleado \n:")
             cursoModificado = Curso(idCurso, descripcion, idEmpleado)
             cursoModificado.AgregarCurso(idCurso, descripcion, idEmpleado)
-
-
         elif segundaOpcion == 4: 
             print ("Se te mostrara toda la informacion en la base de datos ")
             archivo = open("./archivos/Cursos.txt",'r')
@@ -235,7 +226,6 @@ if opcionInicial == 2:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
-
         elif segundaOpcion == 5: 
             idRequerida = input("Dime la id requerida del curso que quieres ver")
             consultaESPCurso(idRequerida)
@@ -249,5 +239,18 @@ if opcionInicial == 2:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
-        
+        elif segundaOpcion == 6: 
+            terceraOpcion = int(input("que quieres hacer con la union Curso-Tema? 1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso-Tema Especifico") 
+            if terceraOpcion == 1: 
+                idCurso_Tema = int (input ("Dame el id del Curso-Tema \n: "))
+                idTema =  input ("Dame el id del tema\n:")
+                idCurso = input ("Dame la id del curso \n:")
+                nuevoCurso_Tema = Curso_Tema(idCurso_Tema, idCurso, idTema)
+                nuevoCurso_Tema.AgregarVinculo(idCurso_Tema, idCurso, idTema)
+                print ("Tu vinculo a sido agregado")
+                print ("*" * 30 )
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
+            
 
