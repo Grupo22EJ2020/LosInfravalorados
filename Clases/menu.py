@@ -214,7 +214,19 @@ if opcionInicial == 2:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
-                
 
+        elif segundaOpcion == 5: 
+            idRequerida = input("Dime la id requerida del curso que quieres ver")
+            consultaESPCurso(idRequerida)
+            print ("SE TE MOSTRO EL CURSO")
+            print ("*" * 30 )
+            final = int (input("Te gustaria continuar? 1. SI \n2. NO : "))
+            if final == 1: 
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
+            elif final ==2: 
+                print ("*" * 30 )
+                print ("PROGRAMA TERMINADO")
+                print ("*" * 30 )
         
 
