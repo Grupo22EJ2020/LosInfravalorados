@@ -12,7 +12,15 @@ class Curso() :
          archivo.close()
 
 
-     def consultaCurso (self,idCurso): 
+    def consultaCurso (self):
+        archivo = open ("./archivos/Cursos.txt",'r')
+        for renglon in archivo:
+            datosCurso = renglon.split ('|')
+            print(f"Id: {datosCurso[0]} Nombre: {datosCurso[1]}")
+        archivo.close()
+    
+
+     def consultaESPCurso (self,idCurso): 
         archivo = open('./archivos/Cursos.txt',"r",encoding='utf8')
         for renglon in archivo:
             print(f"No. Caracteres: {len(renglon)}: Renglon: {renglon}")
