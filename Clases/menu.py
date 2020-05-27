@@ -45,7 +45,7 @@ def eliminarCurso_Tema(self,idCurso_Tema):
             if idCurso_Tema not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
-def empleadoEspecifico (idCurso_Tema):
+def Curso_Tema_Especifico(idCurso_Tema):
     archivo = open('./archivos/Curso_tema.txt',"r")
     for linea in archivo: 
         contenido = archivo.readlines(2)
@@ -73,7 +73,7 @@ if opcionInicial == 1:
             nombre = input ("Dame el nombre de tu empleado \n:")
             direccion = input ("Ahora dame la direccion \n:")
             nuevoEmpleado = Empleado(idEmpleado, nombre, direccion)
-            nuevoEmpleado.AgregarEmpleado()
+            nuevoEmpleado.AgregarEmpleado(idEmpleado, nombre, direccion)
             print ("Tu empleado a sido agregado")
             print ("*" * 30 )
             print ("Te mostrare el menu inicial. \nElige una opcion" )
