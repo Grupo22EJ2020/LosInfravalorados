@@ -162,5 +162,23 @@ if opcionInicial == 3:
                 print ("*" * 30 )
 
 
+if opcionInicial == 2: 
+    while opcionInicial == 2:
+        print ("Elegiste CURSOS") 
+        print ("Este es el menu disponible: ")
+        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n:"))
+        if segundaOpcion == 1: 
+            print ("A continuacion de pedire algunos datos requeridos para agregar Cursos:")
+            idCurso = int (input ("Dame el id del curso \n: "))
+            descripcion = input ("Dame la descripcion del curso \n:")
+            idEmpleado = input ("Dame la id del empleado \n:")
+            nuevoCurso = Curso(idCurso, descripcion, idEmpleado)
+            nuevoCurso.AgregarCurso(idCurso, descripcion, idEmpleado)
+            print ("Tu curso a sido agregado")
+            print ("*" * 30 )
+            print ("Te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
+
         
 
