@@ -180,5 +180,13 @@ if opcionInicial == 2:
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
 
 
+        elif segundaOpcion == 2: 
+            idABorrar = input("Dime el id del curso que deseas eliminar")
+            eliminarCurso(idABorrar)
+            print ("Tu curso a sido borrado")
+            print ("*" * 30 )
+            print ("Te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
         
 
