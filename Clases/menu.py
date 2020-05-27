@@ -20,7 +20,7 @@ def empleadoEspecifico (idEmpleado):
         if contenido == idEmpleado: 
             print (linea) 
 
-def eliminarTema(self, idTema):
+def eliminarTema(idTema):
     with open('./archivos/Tema.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
@@ -29,7 +29,18 @@ def eliminarTema(self, idTema):
                 archivo.write(renglon)
         archivo.truncate()
 
+<<<<<<< HEAD
 def eliminarCurso(idCurso):
+=======
+def consultaEspTema (idTema):
+    archivo = open ("./archivos/Tema.txt",'r',encoding='utf8')
+    for renglon in archivo:
+        print(f"No. Caracteres:{len(renglon)}: Renglon: {renglon} ")
+        archivo.close()
+
+
+def eliminarCurso(self,idCurso):
+>>>>>>> ca38a4f86b70762c94ec3752a43ea2f12217ea9c
     with open('./archivos/Curso.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
@@ -47,6 +58,7 @@ def eliminarCurso_Tema(idCurso_Tema):
             if idCurso_Tema not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
+
 def Curso_Tema_Especifico(idCurso_Tema):
     archivo = open('./archivos/Curso_tema.txt',"r")
     for linea in archivo: 
@@ -120,7 +132,7 @@ if opcionInicial == 1:
             idAModificar = input ("Dime el id del empleado que quieres modificar \n:")
             eliminarEmpleado(idAModificar)
             idEmpleado = int (input ("Dame el id \n: "))
-            nombre = input ("Dame el onmbre \n:")
+            nombre = input ("Dame el nombre \n:")
             direccion = input ("Dame la direccion \n:")
             empleadoModificado = Empleado(idEmpleado, nombre, direccion)
             empleadoModificado.AgregarEmpleado(idEmpleado, nombre, direccion)
@@ -177,6 +189,14 @@ elif opcionInicial == 3:
             print ("*" * 30 )
             print ("Te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+        
+        elif segundaOpcion == 3: 
+             idAModificar = input ("dime el id del tema que quieres modificar")
+             eliminarTema(idAModificar)
+             idTema = int(input("Dame el id: "))
+             nombre = input ("Dame el nombre del tema: ")
+             temaModificado = Tema(idTema,nombre)
+             temaModificado.AgregarTema(idTema,nombre)
 
         elif segundaOpcion == 4:
             print ("Se te mostrara toda la informacion en la base de datos ")
