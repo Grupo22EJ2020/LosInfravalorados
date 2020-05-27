@@ -11,10 +11,7 @@ def eliminarEmpleado(idEmpleado):
         archivo.truncate()
 
 def empleadoEspecifico (idEmpleado):
-    archivo =open('./archivos/Empleado.txt',"r")
-    for renglon in archivo: 
-        if renglon in idEmpleado: 
-            print (renglon)
+    
 
 
 def eliminarTema(self, idTema):

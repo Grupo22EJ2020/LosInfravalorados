@@ -9,7 +9,6 @@ class Empleado() :
          archivo = open("./archivos/Empleado.txt",'a')
          numeroInt= str (idEmpleado)
          archivo.write (numeroInt + "|" + nombre + "|" + direccion + "|" + '\n')
-
          archivo.close()
 
 
