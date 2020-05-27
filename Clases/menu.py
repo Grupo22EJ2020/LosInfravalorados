@@ -1,6 +1,8 @@
 from Clase_Empleado import Empleado
 from Clase_Tema import Tema
 from Clase_Curso import Curso
+from Clase_Curso_Tema import Curso_Tema
+from Clase_Curso_Tema_Video import Curso_Tema_Video
 
 def eliminarEmpleado(idEmpleado): 
     with open('./archivos/Empleado.txt',"r+") as archivo: 
@@ -28,7 +30,7 @@ def eliminarTema(self, idTema):
         archivo.truncate()
 
 def eliminarCurso(self,idCurso):
-    with open('./archivos/Cursos.txt',"r+") as archivo:
+    with open('./archivos/Curso.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
         for renglon in nuevoArchivo:
@@ -51,6 +53,27 @@ def Curso_Tema_Especifico(idCurso_Tema):
         contenido = archivo.readlines(2)
         if contenido == idCurso_Tema: 
             print (linea) 
+
+
+def eliminarCurso_Tema_Video(self,idCurso_Tema_Video):
+    with open('./archivos/Curso_Tema_Video.txt',"r+") as archivo:
+        nuevoArchivo= archivo.readlines()
+        archivo.seek(0)
+        for renglon in nuevoArchivo:
+            if idCurso_Tema not in renglon:
+                archivo.write(renglon)
+        archivo.truncate()
+def Curso_Tema_VideoEspecifico(idCurso_Tema_Video):
+    archivo = open('./archivos/Curso_Tema_Video.txt',"r")
+    for linea in archivo: 
+        contenido = archivo.readlines(2)
+        if contenido == idCurso_Tema_Video: 
+            print (linea) 
+
+
+
+
+
 
 
 
@@ -287,6 +310,56 @@ elif opcionInicial == 2:
                 print ("*" * 30 )
                 print ("Te mostrare el menu inicial. \nElige una opcion" )
                 opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+                        
+        elif segundaOpcion == 7:
+            terceraOpcion = int(input("que quieres hacer con la union Curso-Tema-Video? 1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso-Tema Especifico") 
+            if terceraOpcion == 1: 
+                idCurso_Tema_Video = int (input ("Dame el id del Curso-Tema-Video \n: "))
+                idCurso_Tema =  input ("Dame el id del Curso-Tema\n:")
+                idVideo = input ("Dame la id del video \n:")
+                nuevoCurso_Tema_Video = Curso_Tema_Video(idCurso_Tema_Video, idCurso_Tema, idVideo)
+                nuevoCurso_Tema_Video.AgregarVinculoCTV(idCurso_Tema_Video, idCurso_Tema, idVideo)
+                print ("Tu vinculo a sido agregado")
+                print ("*" * 30 )
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+            elif terceraOpcion ==2: 
+                idABorrar = input("Dime el id del curso_Tema_Video que deseas eliminar")
+                eliminarCurso_Tema_Video(idABorrar)
+                print ("Tu vinculo curso-tema-Video a sido borrado")
+                print ("*" * 30 )
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+            elif terceraOpcion == 3: 
+                idAModificar = input ("Dime el id del curso-tema-video que quieres modificar \n:")
+                eliminarCurso_Tema_Video(idAModificar)
+                idCurso_Tema_Video = int (input ("Dame el id del curso-tema-video \n: "))
+                idCurso = input ("Dame la id del curso-tema\n:")
+                idVideo = input ("Dame la id del video \n:")
+                curso_Tema_VideoModificado = Curso_Tema_Video(idCurso_Tema_Video,idCurso_Tema,idVideo)
+                curso_Tema_VideoModificado.AgregarCurso_Tema_Video(idCurso_Tema_Video,idCurso_Tema, idVideo)
+                print ("Tu curso-tema_video a sido modificado")
+                print ("*" * 30 )
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+            elif terceraOpcion == 4: 
+                print ("Se te mostrara toda la informacion en la base de datos ")
+                archivo = open("./archivos/Cursos_Tema_Video.txt",'r')
+                print(archivo.read())
+                archivo.close()
+                print ("SE TE MOSTRO LA INFORMACION REQUERIDA")
+                print ("*" * 30 )
+                print ("*" * 30 )
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+            elif terceraOpcion == 5: 
+                idRequerida = input("Dime la id requerida del curso-tema-video que quieres ver")
+                Curso_Tema_Video_Especifico(idRequerida)
+                print ("SE TE MOSTRO EL CURSO-TEMA-VIDEO")
+                print ("*" * 30 )
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
 
 
 
