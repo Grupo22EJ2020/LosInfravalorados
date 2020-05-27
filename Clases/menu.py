@@ -214,7 +214,7 @@ elif opcionInicial == 2:
         print ("Elegiste CURSOS") 
         print ("Este es el menu disponible: ")
         segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n6. Ver Union Curso-Tema \n7. Ver union Curso-Video")
-        if segundaOpcion == 1:    
+        if segundaOpcion == 1:
             print ("A continuacion de pedire algunos datos requeridos para agregar Cursos:")
             idCurso = int (input ("Dame el id del curso \n: "))
             descripcion = input ("Dame la descripcion del curso \n:")
