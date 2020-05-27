@@ -57,6 +57,15 @@ if opcionInicial == 1:
             print ("te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
 
+        elif segundaOpcion == 3: 
+            idAModificar = input ("dime el id del empleado que quieres modificar")
+            eliminarEmpleado(idAModificar)
+            idEmpleado = int (input ("dame el id \n: "))
+            nombre = input ("dame el onmbre \n:")
+            direccion = input ("dame la direccion \n:")
+            empleadoModificado = Empleado(idEmpleado, nombre, direccion)
+            empleadoModificado.AgregarEmpleado(idEmpleado, nombre, direccion)
+        
         elif segundaOpcion == 4: 
             print ("Se te mostrara toda la informacion en la base de datos ")
             archivo = open("./archivos/Empleado.txt",'r')
