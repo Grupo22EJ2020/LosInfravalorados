@@ -5,7 +5,6 @@ class Tema():
 
     def AgregarTema(self,idTema,nombre):
         archivo = open("./archivos/Tema.txt",'a')
-        
         idTema = int(input("Ingresa el numero asignado al tema: "))
         nombre = input("Ingresa el nombre del tema: ")
         archivo.write(idTema + "|"+ nombre + "|" + idTema + "|" + "\n")
