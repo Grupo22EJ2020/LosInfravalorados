@@ -11,8 +11,11 @@ def eliminarEmpleado(idEmpleado):
         archivo.truncate()
 
 def empleadoEspecifico (idEmpleado):
-    
-
+    archivo = open('./archivos/Empleado.txt',"r")
+    for linea in archivo: 
+        contenido = archivo.readlines(2)
+        if contenido == idEmpleado: 
+            print (linea) 
 
 def eliminarTema(self, idTema):
     with open('./archivos/Tema.txt',"r+") as archivo:
@@ -22,7 +25,6 @@ def eliminarTema(self, idTema):
             if idTema not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
-
 
 
 print ("*"* 30)
@@ -84,7 +86,6 @@ if opcionInicial == 1:
                 print ("*" * 30 )
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
-
 
 
 if opcionInicial == 3:
