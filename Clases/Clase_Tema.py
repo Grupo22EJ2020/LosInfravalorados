@@ -9,7 +9,7 @@ class Tema():
         idTema = int(input("Ingresa el numero asignado al tema: "))
         nombre = input("Ingresa el nombre del tema: ")
 
-        archivo.write(idTema + "|"+ nombre + "|" + idTema)
+        archivo.write(idTema + "|"+ nombre + "|" + idTema + "|" + "\n")
 
         archivo.close()
 

@@ -10,6 +10,13 @@ def eliminarEmpleado(idEmpleado):
                 archivo.write(renglon)
         archivo.truncate()
 
+def empleadoEspecifico (idEmpleado):
+    archivo =open('./archivos/Empleado.txt',"r")
+    for renglon in archivo: 
+        if renglon in idEmpleado: 
+            print (renglon)
+
+
 def eliminarTema(self, idTema):
     with open('./archivos/Tema.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
@@ -18,6 +25,8 @@ def eliminarTema(self, idTema):
             if idTema not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
+
+
 
 print ("*"* 30)
 print ("Te mostrare el menu inicial")
@@ -66,9 +75,8 @@ if opcionInicial == 1:
                 print ("*" * 30 )
 
         elif segundaOpcion == 5: 
-            idRequerida = int(input("dime la id requerida del empleado que quieres ver"))
-            mostrarEmpleadoEspecifico = Empleado(idRequerida)
-            mostrarEmpleadoEspecifico.consultaEspecifica()
+            idRequerida = input("dime la id requerida del empleado que quieres ver")
+            empleadoEspecifico(idRequerida)
             print ("se te mostro el empleado")
             print ("*" * 30 )
             final = int (input("te gustaria continuar? 1. SI \n2. NO : "))
