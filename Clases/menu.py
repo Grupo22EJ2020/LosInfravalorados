@@ -257,7 +257,7 @@ elif opcionInicial == 2:
                 print ("*" * 30 )
         elif segundaOpcion == 5: 
             idRequerida = input("Dime la id requerida del curso que quieres ver")
-            consultaESPCurso(idRequerida)
+            Curso_Especifico(idRequerida)
             print ("SE TE MOSTRO EL CURSO")
             print ("*" * 30 )
             final = int (input("Te gustaria continuar? 1. SI \n2. NO : "))
