@@ -20,7 +20,7 @@ def empleadoEspecifico (idEmpleado):
         if contenido == idEmpleado: 
             print (linea) 
 
-def eliminarTema(self, idTema):
+def eliminarTema(idTema):
     with open('./archivos/Tema.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
@@ -47,7 +47,7 @@ def eliminarCurso_Tema(self,idCurso_Tema):
             if idCurso_Tema not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
-        
+
 def Curso_Tema_Especifico(idCurso_Tema):
     archivo = open('./archivos/Curso_tema.txt',"r")
     for linea in archivo: 
@@ -178,6 +178,14 @@ elif opcionInicial == 3:
             print ("*" * 30 )
             print ("Te mostrare el menu inicial. \nElige una opcion" )
             opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+        
+        elif segundaOpcion == 3: 
+             idAModificar = input ("dime el id del tema que quieres modificar")
+             eliminarTema(idAModificar)
+             idTema = int(input("Dame el id: "))
+             nombre = input ("Dame el nombre del tema: ")
+             temaModificado = Tema(idTema,nombre)
+             temaModificado.AgregarTema(idTema,nombre)
 
         elif segundaOpcion == 4:
             print ("Se te mostrara toda la informacion en la base de datos ")
