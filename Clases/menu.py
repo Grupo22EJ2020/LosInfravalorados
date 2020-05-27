@@ -183,5 +183,71 @@ if opcionInicial == 3:
                 print ("*" * 30 )
 
 
+if opcionInicial == 2: 
+    while opcionInicial == 2:
+        print ("Elegiste CURSOS") 
+        print ("Este es el menu disponible: ")
+        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n:"))
+        if segundaOpcion == 1: 
+            print ("A continuacion de pedire algunos datos requeridos para agregar Cursos:")
+            idCurso = int (input ("Dame el id del curso \n: "))
+            descripcion = input ("Dame la descripcion del curso \n:")
+            idEmpleado = input ("Dame la id del empleado \n:")
+            nuevoCurso = Curso(idCurso, descripcion, idEmpleado)
+            nuevoCurso.AgregarCurso(idCurso, descripcion, idEmpleado)
+            print ("Tu curso a sido agregado")
+            print ("*" * 30 )
+            print ("Te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
+
+        elif segundaOpcion == 2: 
+            idABorrar = input("Dime el id del curso que deseas eliminar")
+            eliminarCurso(idABorrar)
+            print ("Tu curso a sido borrado")
+            print ("*" * 30 )
+            print ("Te mostrare el menu inicial. \nElige una opcion" )
+            opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
+
+
+        elif segundaOpcion == 3: 
+            idAModificar = input ("Dime el id del curso que quieres modificar \n:")
+            eliminarCurso(idAModificar)
+            idCurso = int (input ("Dame el id del curso \n: "))
+            descripcion = input ("Dame la descripcion del curso\n:")
+            idEmpleado = input ("Dame la id del empleado \n:")
+            cursoModificado = Curso(idCurso, descripcion, idEmpleado)
+            cursoModificado.AgregarCurso(idCurso, descripcion, idEmpleado)
+
+
+        elif segundaOpcion == 4: 
+            print ("Se te mostrara toda la informacion en la base de datos ")
+            archivo = open("./archivos/Cursos.txt",'r')
+            print(archivo.read())
+            archivo.close()
+            print ("SE TE MOSTRO LA INFORMACION REQUERIDA")
+            print ("*" * 30 )
+            final = int (input("Te gustaria continuar? 1. SI \n2. NO : "))
+            if final == 1: 
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
+            elif final ==2: 
+                print ("*" * 30 )
+                print ("PROGRAMA TERMINADO")
+                print ("*" * 30 )
+
+        elif segundaOpcion == 5: 
+            idRequerida = input("Dime la id requerida del curso que quieres ver")
+            consultaESPCurso(idRequerida)
+            print ("SE TE MOSTRO EL CURSO")
+            print ("*" * 30 )
+            final = int (input("Te gustaria continuar? 1. SI \n2. NO : "))
+            if final == 1: 
+                print ("Te mostrare el menu inicial. \nElige una opcion" )
+                opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:")) 
+            elif final ==2: 
+                print ("*" * 30 )
+                print ("PROGRAMA TERMINADO")
+                print ("*" * 30 )
         
 
