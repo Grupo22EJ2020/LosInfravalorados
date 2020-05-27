@@ -29,7 +29,7 @@ def eliminarTema(idTema):
                 archivo.write(renglon)
         archivo.truncate()
 
-def consultaEspTema (self,idTema):
+def consultaEspTema (idTema):
     archivo = open ("./archivos/Tema.txt",'r',encoding='utf8')
     for renglon in archivo:
         print(f"No. Caracteres:{len(renglon)}: Renglon: {renglon} ")
@@ -128,7 +128,7 @@ if opcionInicial == 1:
             idAModificar = input ("Dime el id del empleado que quieres modificar \n:")
             eliminarEmpleado(idAModificar)
             idEmpleado = int (input ("Dame el id \n: "))
-            nombre = input ("Dame el onmbre \n:")
+            nombre = input ("Dame el nombre \n:")
             direccion = input ("Dame la direccion \n:")
             empleadoModificado = Empleado(idEmpleado, nombre, direccion)
             empleadoModificado.AgregarEmpleado(idEmpleado, nombre, direccion)
