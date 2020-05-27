@@ -10,17 +10,6 @@ class Tema():
         archivo.write(idTema + "|"+ nombre + "|" + idTema + "|" + "\n")
         archivo.close()
 
-    def consultaTema (self):
-        archivo = open ("./archivos/Tema.txt",'r')
-        for renglon in archivo:
-            datosTema = renglon.split ('|')
-            print(f"Id: {datosTema[0]} Nombre: {datosTema[1]}")
-        archivo.close()
-
-    def consultaEspTema (self,idTema):
-        archivo = open ("./archivos/Tema.txt",'r',encoding='utf8')
-        for renglon in archivo:
-            print(f"No. Caracteres:{len(renglon)}: Renglon: {renglon} ")
-        archivo.close()
+    
         
     
