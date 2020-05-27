@@ -10,3 +10,10 @@ class Curso() :
          numeroInt= str (idCurso)
          archivo.write (numeroInt + "|" + descripcion + "|" + idEmpleado + "|" "\n")
          archivo.close()
+
+
+    def consultaCurso (self,idCurso): 
+         archivo = open('./archivos/Cursos.txt',"r",encoding='utf8')
+         for renglon in archivo:
+             print(f"No. Caracteres: {len(renglon)}: Renglon: {renglon}")
+         archivo.close()    
