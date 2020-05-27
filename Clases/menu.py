@@ -29,18 +29,13 @@ def eliminarTema(idTema):
                 archivo.write(renglon)
         archivo.truncate()
 
-<<<<<<< HEAD
-def eliminarCurso(idCurso):
-=======
 def consultaEspTema (idTema):
     archivo = open ("./archivos/Tema.txt",'r',encoding='utf8')
     for renglon in archivo:
         print(f"No. Caracteres:{len(renglon)}: Renglon: {renglon} ")
         archivo.close()
 
-
 def eliminarCurso(self,idCurso):
->>>>>>> ca38a4f86b70762c94ec3752a43ea2f12217ea9c
     with open('./archivos/Curso.txt',"r+") as archivo:
         nuevoArchivo= archivo.readlines()
         archivo.seek(0)
@@ -48,7 +43,6 @@ def eliminarCurso(self,idCurso):
             if idCurso not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
-
 
 def eliminarCurso_Tema(idCurso_Tema):
     with open('./archivos/Curso_tema.txt',"r+") as archivo:
@@ -234,7 +228,7 @@ elif opcionInicial == 2:
         print ("Elegiste CURSOS") 
         print ("Este es el menu disponible: ")
         segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n6. Ver Union Curso-Tema \n7. Ver union Curso-Video")
-        if segundaOpcion == 1:
+        if segundaOpcion == 1: 
             print ("A continuacion de pedire algunos datos requeridos para agregar Cursos:")
             idCurso = int (input ("Dame el id del curso \n: "))
             descripcion = input ("Dame la descripcion del curso \n:")
