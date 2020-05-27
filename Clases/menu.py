@@ -70,6 +70,12 @@ def Curso_Tema_VideoEspecifico(idCurso_Tema_Video):
         if contenido == idCurso_Tema_Video: 
             print (linea) 
 
+def Curso_Especifico(idCurso):
+    archivo = open('./archivos/Curso.txt',"r")
+    for linea in archivo:
+        contenido = archivo.readlines(2)
+        if contenido == idCurso_Tema_Video:
+            print(linea)
 
 
 
