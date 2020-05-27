@@ -47,6 +47,7 @@ def eliminarCurso_Tema(self,idCurso_Tema):
             if idCurso_Tema not in renglon:
                 archivo.write(renglon)
         archivo.truncate()
+        
 def Curso_Tema_Especifico(idCurso_Tema):
     archivo = open('./archivos/Curso_tema.txt',"r")
     for linea in archivo: 
