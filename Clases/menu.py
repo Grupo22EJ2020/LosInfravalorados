@@ -227,7 +227,7 @@ elif opcionInicial == 2:
     while opcionInicial == 2:
         print ("Elegiste CURSOS") 
         print ("Este es el menu disponible: ")
-        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n6. Ver Union Curso-Tema \n7. Ver union Curso-Video")
+        segundaOpcion = int(input("1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso Especifico \n6. Ver Union Curso-Tema \n7. Ver union Curso-Video"))
         if segundaOpcion == 1: 
             print ("A continuacion de pedire algunos datos requeridos para agregar Cursos:")
             idCurso = int (input ("Dame el id del curso \n: "))
@@ -283,7 +283,7 @@ elif opcionInicial == 2:
                 print ("PROGRAMA TERMINADO")
                 print ("*" * 30 )
         elif segundaOpcion == 6: 
-            terceraOpcion = int(input("que quieres hacer con la union Curso-Tema? 1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso-Tema Especifico") 
+            terceraOpcion = int(input("que quieres hacer con la union Curso-Tema? 1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso-Tema Especifico")) 
             if terceraOpcion == 1: 
                 idCurso_Tema = int (input ("Dame el id del Curso-Tema \n: "))
                 idTema =  input ("Dame el id del tema\n:")
@@ -332,7 +332,7 @@ elif opcionInicial == 2:
                 opcionInical = int(input("1. Empleado \n2. Curso \n3. Tema \n4. Video \n:"))
                         
         elif segundaOpcion == 7:
-            terceraOpcion = int(input("que quieres hacer con la union Curso-Tema-Video? 1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso-Tema Especifico") 
+            terceraOpcion = int(input("que quieres hacer con la union Curso-Tema-Video? 1. Agregar \n2. Borrar \n3. Modificar \n4. Ver Todo \n5. Ver Curso-Tema Especifico")) 
             if terceraOpcion == 1: 
                 idCurso_Tema_Video = int (input ("Dame el id del Curso-Tema-Video \n: "))
                 idCurso_Tema =  input ("Dame el id del Curso-Tema\n:")
